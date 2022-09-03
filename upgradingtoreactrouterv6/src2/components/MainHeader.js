@@ -8,7 +8,6 @@ const MainHeader = () => {
       <nav>
         <ul>
           <li>
-
             <NavLink className={(navData) => navData.isActive ? classes.active : ''} to='/welcome'>
               Welcome
             </NavLink>
@@ -19,8 +18,8 @@ const MainHeader = () => {
             </NavLink>
           </li>
         </ul>
-      </nav >
-    </header >
+      </nav>
+    </header>
   );
 };
 

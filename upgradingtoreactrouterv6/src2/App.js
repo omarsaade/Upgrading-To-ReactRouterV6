@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 
 import Welcome from './pages/Welcome';
 import Products from './pages/Products';
@@ -11,9 +11,15 @@ function App() {
       <MainHeader />
       <main>
         <Routes>
-          {/* heda jsx element..so mnesat3mel element badal kelmet component */}
-          <Route path="/welcome" element={<Welcome />} />
+          <Route path="/" element={<Navigate to="/welcome" replace />} />
+
+          {/* he el harake mna3mela iza habbin njame3 kell routes bi fared mahal */}
+          <Route path="/welcome/*" element={<Welcome />} >
+            <Route path="new-user" element={<p>Welcome, new user!</p>} />
+          </Route>
+
           <Route path="/products" element={<Products />} />
+
           <Route path='/products/:productId' element={<ProductDetail />} />
         </Routes>
       </main>

@@ -1,6 +1,19 @@
+// import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Products = () => {
+
+  // const navigate = useNavigate();
+  //imperative navigation
+  // navigate('/welcome', { replace: true }); // replace bta3mul degre bel url 
+  //mesh push
+
+  // navigate(-2); navigate(1); iza badak terja3 aw t2adem
+
+  // useEffect(() => {
+  //   navigate('/welcome');
+  // }, [])
+
   return (
     <section>
       <h1>The Products Page</h1>
